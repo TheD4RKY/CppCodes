@@ -31,6 +31,14 @@ using namespace std;
               _vrchol=tmp;}
               
 }
+
+int Zasobnik::pop(){
+    _uzel *tmp=_vrchol->dalsi;
+    int vystup=_vrchol->data;
+    delete(_vrchol);
+    _vrchol=tmp;
+    return vystup;
+    }
 int main()
 {
     Zasobnik();
