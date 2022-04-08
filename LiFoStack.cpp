@@ -10,6 +10,7 @@ using namespace std;
           _vrchol = NULL;
           }
       void push(int data);
+      void print();
       int pop();
       private: 
       struct _uzel{
@@ -40,6 +41,16 @@ int Zasobnik::pop(){
     delete(_vrchol);
     _vrchol=tmp;
     return vystup;
+    }
+    
+void Zasobnik::print(){
+    _uzel *kopieVrcholu=_vrchol;
+    
+    while(kopieVrcholu!=NULL){
+        cout<<kopieVrcholu->data<<endl;
+        kopieVrcholu=kopieVrcholu->dalsi;
+        }
+    
     }
     Zasobnik zz;
 int main()
